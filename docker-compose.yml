@@ -3,6 +3,6 @@ version: '3'
 services:
 
   tomcat-db-api:
-    image: your_image_name
+    image: backend2
     ports:
        - "8080:8080"
