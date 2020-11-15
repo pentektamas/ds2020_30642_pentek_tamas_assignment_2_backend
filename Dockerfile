@@ -14,9 +14,9 @@ FROM openjdk:11.0.6-jre
 ENV TZ=UTC
 ENV DB_IP=ec2-52-48-65-240.eu-west-1.compute.amazonaws.com
 ENV DB_PORT=5432
-ENV DB_USER=wlryktxyqpyomt
-ENV DB_PASSWORD=bee98a2afc7f0c3bcdd7df60ee7278ec5fa5cb4fb06a4039b1ffb1107d5851fd
-ENV DB_DBNAME=devidei2vqv0v4
+ENV DB_USER=zqdmgbzkdbtatk
+ENV DB_PASSWORD=2653d3ee1c6494c853f3b04df6a15f367b8e719351a67af06d347b8ba5b12a7b
+ENV DB_DBNAME=d6tui7pp74uk0a
 
 
 COPY --from=builder /root/dependencies/ ./
