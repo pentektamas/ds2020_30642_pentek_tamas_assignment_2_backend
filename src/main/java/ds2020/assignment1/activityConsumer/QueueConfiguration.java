@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class QueueConfiguration {
 
 
-    @Value("${rabbitmq.queue}")
+    @Value("${spring.rabbitmq.queue}")
     private String queueName;
 
     @Bean
