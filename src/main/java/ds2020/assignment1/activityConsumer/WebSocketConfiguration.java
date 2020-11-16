@@ -10,8 +10,8 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer {
 
-    //private final String PREFIX = "http://localhost:8080";
     private final String PREFIX = "https://springappbackenddocker2.herokuapp.com";
+    //private final String PREFIX = "http://localhost:8080";
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
