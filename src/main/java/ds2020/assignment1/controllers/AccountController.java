@@ -5,11 +5,13 @@ import ds2020.assignment1.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/account")
+@PreAuthorize("hasAnyAuthority('DOCTOR_ROLE','CAREGIVER_ROLE', 'PATIENT_ROLE')")
 public class AccountController {
 
     private final AccountService accountService;

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -18,6 +19,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/medication")
+@PreAuthorize("hasAnyAuthority('DOCTOR_ROLE','CAREGIVER_ROLE', 'PATIENT_ROLE')")
 public class MedicationController {
 
     private final MedicationService medicationService;
