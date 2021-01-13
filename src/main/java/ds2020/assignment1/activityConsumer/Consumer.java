@@ -95,6 +95,7 @@ public class Consumer {
     public void getCurrentCaregiver(String caregiverMessage) throws JSONException {
         JSONObject caregiverObject = new JSONObject(caregiverMessage);
         this.currentCaregiverID = UUID.fromString(caregiverObject.getString("caregiverID"));
+        System.out.println("HERE WEEE ARE 222");
     }
 
     public boolean checkPatient(UUID patientID) {
