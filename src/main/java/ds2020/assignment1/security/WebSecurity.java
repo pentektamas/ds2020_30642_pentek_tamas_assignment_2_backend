@@ -36,6 +36,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, SecurityConstants.SIGN_UP_URL).permitAll()
                 .antMatchers(HttpMethod.GET, "/caregiverWebsocket/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/caregiverWebsocket/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/caregiverWebsocket/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/caregiverWebsocket/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager(), accountRepository))
