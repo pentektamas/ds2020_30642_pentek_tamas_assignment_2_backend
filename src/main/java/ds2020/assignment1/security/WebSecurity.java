@@ -38,6 +38,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/caregiverWebsocket/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/caregiverWebsocket/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/caregiverWebsocket/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/caregiverInfo/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/caregiverInfo/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager(), accountRepository))
