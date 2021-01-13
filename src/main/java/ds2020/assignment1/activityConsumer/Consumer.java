@@ -91,7 +91,7 @@ public class Consumer {
         this.simpMessagingTemplate.convertAndSend("/queue/caregiver", "Patient: " + patientName + message);
     }
 
-    @MessageMapping("/api/caregiverInfo")
+    @MessageMapping("/caregiverInfo")
     public void getCurrentCaregiver(String caregiverMessage) throws JSONException {
         JSONObject caregiverObject = new JSONObject(caregiverMessage);
         this.currentCaregiverID = UUID.fromString(caregiverObject.getString("caregiverID"));
